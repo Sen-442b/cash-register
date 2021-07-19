@@ -10,7 +10,7 @@ let  twenty = 0 ;
 let ten = 0 ;
 let five  = 0 ;
 let one = 0 ;
-
+input = input - 50;
 while(input>0){
 if ( input >= 2000){
     input = input -  2000;
@@ -34,7 +34,7 @@ if ( input >= 2000){
 } else if (input >= 5){
 input = input -5 ;
 five ++ ;
-}else if(input > 1){
+}else if(input >= 1){
 input = input - 1;
 one ++ ;
 }
@@ -42,4 +42,4 @@ one ++ ;
 // if(input<2000){
 
 // }
-console.log(twoK , fiveHundred,hundred, input);
+console.log(twoK , fiveHundred,hundred,twenty,ten,five,one, input);
