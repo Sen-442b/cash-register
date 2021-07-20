@@ -1,8 +1,13 @@
-const readLineSync = require ('readline-sync');
 
 
-var input = readLineSync.question("Enter bill amount bruh\n");
 
+const btnDisplay = document.getElementById('display-result');
+const result = document.querySelector('.result');
+const due = document.getElementById('due');
+const received = document.getElementById('received');
+const showDiv = document.querySelector('.hidden-amount');
+const resultTable = document.querySelector('.result-table');
+const message = document.querySelector('.message');
 let twoK = 0 ;
 let fiveHundred  = 0 ;
 let hundred = 0 ; 
@@ -10,8 +15,59 @@ let  twenty = 0 ;
 let ten = 0 ;
 let five  = 0 ;
 let one = 0 ;
-input = input - 50;
-while(input>0){
+let clicked=0;
+
+btnDisplay.addEventListener("click", ()=>{
+    let dueValue = parseInt(due.value); 
+// console.log(input);
+if(isNaN(dueValue)){
+message.innerText="Enter Valid  Amount";
+}else{
+    clicked ++;
+}
+if(clicked === 1 ){
+    showDiv.style.display="block";
+    btnDisplay.innerText="Show Result";
+
+}else if(clicked>1){
+    let receivedValue = parseInt(received.value); 
+    
+if(isNaN(receivedValue)){
+    message.innerText="Enter Valid Amount"
+} else if(dueValue>receivedValue){
+    message.innerText="You have received lesser cash than the due bill amount (...Are you really that stupid??) "
+
+}else if(dueValue===receivedValue){
+    message.innerText="You need not to return anything, Mr. Ramanujan"
+
+}
+else{
+   let input =  receivedValue-dueValue;
+    getResultData(input);
+    resultTable.style.display="block";
+    message.style.display="none";
+}
+}
+
+
+
+
+
+result.innerHTML=`
+ <td>Number of Notes</td>
+  <td>${twoK}</td>
+  <td>${fiveHundred}</td>
+  <td>${hundred}</td>
+  <td>${twenty}</td>
+  <td>${ten}</td>
+  <td>${five}</td>
+  <td>${one}</td>
+
+`
+})
+
+function getResultData(input){
+ while(input>0){
 if ( input >= 2000){
     input = input -  2000;
     twoK ++ ;
@@ -39,7 +95,6 @@ input = input - 1;
 one ++ ;
 }
 }
-// if(input<2000){
+}
 
-// }
-console.log(twoK , fiveHundred,hundred,twenty,ten,five,one, input);
+// console.log(twoK , fiveHundred,hundred,twenty,ten,five,one, input);

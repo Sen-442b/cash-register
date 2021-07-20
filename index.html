@@ -1,67 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cash Register App</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <main class="card">
-        <h1>Cash Register App </h1>
-        <p>Enter total  bill amount and cash given by the customer to calculate the best possible way to return their change</p>
+      <h1>Cash Register App</h1>
+      <p>
+        Enter total bill amount and cash given by the customer to calculate the
+        best possible way to return their change
+      </p>
 
-        <div>
-            <h3>Total Bill Amount</h3>
-            <input class="amount" id="due" type="number"  placeholder="eg. 456" />
-            <h3>Amount received </h3>
-            <input class="amount" id="received" type="number" />
-             </div>
-
-             <div class="result">
-                 <table>
-                     <tr>
-                         <th>
-                        Bank Notes
-                         </th>
-                         <th>
-                            2000
-                         </th>
-                         <th>
-                            500 
-                         </th>
-                         <th>
-                            100
-                         </th>
-                         <th>
-                            20
-                         </th>
-                         <th>
-                            10
-                         </th>
-                         <th>
-                            5
-                         </th>
-                         <th>
-                            1
-                         </th>
-                     </tr>
-                     <tr>
-                         <td>Number of Notes</td>
-                         <th id="tw0-k">1</th>
-                         <th id="five-hund">1</th>
-                         <th id="one-hund">1</th>
-                         <th id="twenty">1</th>
-                         <th id="ten">1</th>
-                         <th id="five">1</th>
-                         <th id="one">1</th>
-                     </tr>
-                 </table>
-             </div>
-
+     
+        <h3>Total Bill Amount</h3>
+        <input class="amount" id="due" type="number" placeholder="eg. 456" />
+        <div class="hidden-amount">
+        <h3>Amount Received</h3>
+        <input class="amount" id="received" type="number" />
+        </div>
+        <button id="display-result">Next</button>
+      <div class="result-table">
+          <h3> Change to be Returned</h3>
+        <table>
+          <tr>
+            <th>Bank Notes</th>
+            <th>2000</th>
+            <th>500</th>
+            <th>100</th>
+            <th>20</th>
+            <th>10</th>
+            <th>5</th>
+            <th>1</th>
+          </tr>
+          <tr class="result">
+            <td>Number of Notes</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+        </table>
+      </div>
+    
+      <div class="message"></div>
     </main>
 
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
