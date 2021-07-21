@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap');
+*{
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 
 .hidden-amount{
     display:none;
@@ -5,5 +14,31 @@
 
 .result-table{
     display: none;
-    
+    flex-direction: column;
+}
+
+.card{
+    border:2px solid black;
+    margin:auto;
+    max-width:500px;
+    padding: 2rem 1rem;
+    text-align:center;
+    background: linear-gradient(#A7F3D0, #F9A8D4);
+    border-radius:5px;
+
+}
+h3{
+    font-weight:100;
+    border: 2px dotted black;
+
+}
+
+table{
+    padding: 5px;
+    text-align: center;
+    border: 2px dotted black;
+}
+th,td{
+    border: 2px solid black;
+    background
 }
