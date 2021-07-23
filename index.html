@@ -15,14 +15,15 @@
         best possible way to return their change
       </p>
 
-     
+    <form onsubmit="return false" >
         <h3>Total Bill Amount</h3>
-        <input class="amount" id="due" type="number" placeholder="eg. 456" />
+        <input class="amount" id="due" type="number"  min="1" step="1" placeholder="eg. 456"  required/>
         <div class="hidden-amount">
         <h3>Amount Received</h3>
-        <input class="amount" id="received" type="number" />
+        <input class="amount" id="received" type="number" min="1" step="1" />
         </div>
-        <button id="display-result">Next</button>
+        <button  type="submit" id="display-result">Next</button>
+      </form>
       <div class="result-table">
           <h3> Change to be Returned</h3>
         <table>
