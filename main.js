@@ -59,7 +59,7 @@ else{
 
 })
 
-function getResultData(input){
+const getResultData=(input)=>{
     let twoK = 0 ;
 let fiveHundred  = 0 ;
 let hundred = 0 ; 

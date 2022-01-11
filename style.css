@@ -10,9 +10,6 @@ body{
     background-size:cover;
   
 }
-body:hover{
-    background:linear-gradient(#333,#eee) no-repeat center center fixed;
-}
 
 
 .hidden-amount{
@@ -33,6 +30,7 @@ body:hover{
     background: linear-gradient(#f7f7f7,#067ff1);
     border-radius:5px;
     overflow:auto;
+  
 
 }
 h3{
@@ -91,7 +89,7 @@ h1{
 
 }
 h1:hover{
-    background:-webkit-linear-gradient(rgb(147, 196, 201), rgb(23, 179, 44));
+    background:-webkit-linear-gradient(rgb(247, 100, 89), rgb(46, 37, 37));
     background-clip:text;
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
