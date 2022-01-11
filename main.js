@@ -13,7 +13,7 @@ let clicked=0;
 
 btnDisplay.addEventListener("click", ()=>{
     
-   
+  
     let dueValue = parseInt(due.value); 
 // console.log(input);
 if(isNaN(dueValue)|| dueValue<0){
